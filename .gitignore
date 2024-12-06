@@ -1,0 +1,12 @@
+# Ros build files
+build/
+devel/
+install/
+
+# Python cache
+*.pyc
+__pycache__/
+
+# Logs
+*.log
+*.swp

@@ -31,7 +31,7 @@ def read_sensors():
         # Collect data from all sensors
         sensor_data = {}
         sensor_array = Float64MultiArray()
-        all_sensor = True
+        all_sensor_ok = True
         
         for i, s in enumerate(sensors, start=1):
             try:
@@ -55,7 +55,7 @@ def read_sensors():
         array_pub.publish(sensor_array)
         
         # Publish status flug
-        #status_pub.publish(bool(data=all_sensor_ok))
+        status_pub.publish(Bool(data=all_sensor_ok))
         
 
         rate.sleep()
